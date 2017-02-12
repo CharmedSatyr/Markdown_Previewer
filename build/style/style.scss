@@ -1,8 +1,49 @@
-.header, .footer {
-  text-align: center;
-  margin: 2% 0 2% 0;
+ @import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
+
+$blue: #61dafb;
+$light: #bbbbbb;
+$gray: #2d2d2d;
+$dark: #222;
+
+//Page background
+#app {
+  background: $gray;
+  color: $dark;
+  font-family: 'Roboto', sans-serif;
+  a {
+    color: #c05b4d;
+    text-decoration: none;
+  }
 }
 
-.right-panel {
-  background: lightgray;
+//Header and footer
+.container {
+  background: $dark;
+}
+img {
+  margin: -10px -5px 0 -5px;
+  height: 36px;
+  width: 36px;
+}
+
+.header, .footer {
+  color: $blue;
+  margin: 2% 0 2% 0;
+  text-align: center;
+}
+.header {
+  font-size: 300%;
+  font-weight: 900;
+}
+
+//Center of app
+.panels {
+  background: $light;
+  color: $dark;
+  .left-panel, .right-panel {
+    padding: 20px;
+    textarea {
+      background: #f4f4f4;
+    }
+  }
 }

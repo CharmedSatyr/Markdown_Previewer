@@ -9470,11 +9470,11 @@ var App = React.createClass({
 	render: function () {
 		return React.createElement(
 			'div',
-			{ className: 'row' },
+			{ className: 'row panels' },
 			React.createElement(
 				'div',
-				{ className: 'col-xs-6' },
-				React.createElement('textarea', { className: 'left-panel form-control', rows: '30', type: 'text', value: this.state.userInput, onChange: this.handleUserInput })
+				{ className: 'col-xs-6 left-panel' },
+				React.createElement('textarea', { className: 'form-control', rows: '30', type: 'text', value: this.state.userInput, onChange: this.handleUserInput })
 			),
 			React.createElement(
 				'div',
@@ -9500,11 +9500,11 @@ var Footer = React.createClass({
     return React.createElement(
       'div',
       { className: 'footer' },
-      'Created by ',
+      'Created with ',
       React.createElement(
         'a',
-        { href: 'https://www.CharmedSatyr.com' },
-        'CharmedSatyr'
+        { href: 'https://facebook.github.io/react/' },
+        'React'
       )
     );
   }
@@ -9526,13 +9526,10 @@ var Header = React.createClass({
       'div',
       { className: 'header row' },
       React.createElement(
-        'div',
+        'span',
         { className: 'col-xs-12' },
-        React.createElement(
-          'h1',
-          null,
-          'Markdown Previewer'
-        )
+        React.createElement('img', { className: 'img', src: 'style/logo.gif' }),
+        ' Markdown Previewer'
       )
     );
   }

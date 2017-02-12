@@ -27,9 +27,9 @@ var App = React.createClass({
 			},
 			render: function() {
 				return (
-					<div className='row'>
-						<div className='col-xs-6'>
-							<textarea className='left-panel form-control' rows='30' type='text' value={this.state.userInput} onChange={this.handleUserInput}/>
+					<div className='row panels'>
+						<div className='col-xs-6 left-panel'>
+							<textarea className='form-control' rows='30' type='text' value={this.state.userInput} onChange={this.handleUserInput}/>
 						</div>
 						<div className='col-xs-6 right-panel'><div dangerouslySetInnerHTML={{__html: marked(this.state.userInput)}}/></div>
 					</div>
