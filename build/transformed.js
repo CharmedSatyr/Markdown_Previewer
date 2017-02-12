@@ -9460,7 +9460,7 @@ var App = React.createClass({
 	displayName: 'App',
 
 	getInitialState: function () {
-		return { userInput: 'Heading\n=======\n\nSub-heading\n-----------\n \n### Another deeper heading\n \nParagraphs are separated\nby a blank line.\n\nLeave 2 spaces at the end of a line to do a  \nline break\n\nText attributes *italic*, **bold**, \n`monospace`, ~~strikethrough~~ .\n\nShopping list:\n\n  * apples\n  * oranges\n  * pears\n\nNumbered list:\n\n  1. apples\n  2. oranges\n  3. pears\n' };
+		return { userInput: '# Markdown language\n## is easy!\n### Headings take one to six hashes\n\n---\n\nUnordered list:\n* Two *ways* to make _italics_.\n* **Bold** is __similar__.\n*   Combine the two **_easily_**.\n\n***\n\nNumbered list:\n1. `Monospace`\n 1. An extra space precedes this sub-item.\n2. ~~Strikethrough~~\n * This one, too!\n---\n\n>Blockquotes\n\n___\n\n[Find out more here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet \"Optional Title\")\n==' };
 	},
 	handleUserInput: function (e) {
 		this.setState({
