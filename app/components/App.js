@@ -16,7 +16,7 @@ console.log(marked('I am using __markdown__.'));
 
 var App = React.createClass({
 			getInitialState: function () {
-				return {userInput: '# Markdown language\n## is easy!\n### Headings take one to six hashes\n\n---\n\nUnordered list:\n* Two *ways* to make _italics_.\n* **Bold** is __similar__.\n*   Combine the two **_easily_**.\n\n***\n\nNumbered list:\n1. `Monospace`\n 1. An extra space precedes this sub-item.\n2. ~~Strikethrough~~\n * This one, too!\n---\n\n>Blockquotes\n\n___\n\n[Find out more here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet \"Optional Title\")\n=='}
+				return {userInput: '# Markdown language\n## is easy!\n### Headings take one to six hashes\n\n---\n\nUnordered list:\n* There are two *ways* to make _italics_.\n* **Bold** is __similar__.\n*   Combine the two **_easily_**.\n\n***\n\nNumbered list:\n1. `Monospace`\n 1. ←An extra space precedes this sub-item.\n2. ~~Strikethrough~~\n * ←There\'s a space here, too!\n---\n\n>Blockquotes are done like so...\n\n___\n\n[Find out more here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet \"Optional Title\")\n=='}
 			},
 			handleUserInput: function (e) {
 				this.setState(
