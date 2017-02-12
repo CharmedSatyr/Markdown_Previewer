@@ -9441,10 +9441,8 @@ module.exports = ReactPropTypesSecret;
 /***/ (function(module, exports, __webpack_require__) {
 
 var React = __webpack_require__(25);
-var Header = __webpack_require__(83);
-var Footer = __webpack_require__(82);
-
 var marked = __webpack_require__(98);
+
 marked.setOptions({
 	renderer: new marked.Renderer(),
 	gfm: true,
@@ -9455,11 +9453,11 @@ marked.setOptions({
 	smartLists: true,
 	smartypants: false
 });
+
 console.log(marked('I am using __markdown__.'));
 
-var MDPreviewer = React.createClass({
-	displayName: 'MDPreviewer',
-
+var App = React.createClass({
+	displayName: 'App',
 
 	getInitialState: function () {
 		return { userInput: 'Heading\n=======\n\nSub-heading\n-----------\n \n### Another deeper heading\n \nParagraphs are separated\nby a blank line.\n\nLeave 2 spaces at the end of a line to do a  \nline break\n\nText attributes *italic*, **bold**, \n`monospace`, ~~strikethrough~~ .\n\nShopping list:\n\n  * apples\n  * oranges\n  * pears\n\nNumbered list:\n\n  1. apples\n  2. oranges\n  3. pears\n\nThe rain---not the reign---in\nSpain.\n\n *[Herman Fassett](https://freecodecamp.com/hermanfassett)*' };
@@ -9472,41 +9470,26 @@ var MDPreviewer = React.createClass({
 	render: function () {
 		return React.createElement(
 			'div',
-			{ className: 'container' },
-			React.createElement(Header, null),
+			{ className: 'row' },
 			React.createElement(
 				'div',
-				{ className: 'row' },
-				React.createElement(
-					'div',
-					{ className: 'col-xs-6' },
-					React.createElement('textarea', { className: 'form-control', rows: '22', type: 'text', value: this.state.userInput, onChange: this.handleUserInput })
-				),
-				React.createElement(
-					'div',
-					{ className: 'col-xs-6' },
-					this.state.userInput
-				)
+				{ className: 'col-xs-6' },
+				React.createElement('textarea', { className: 'form-control', rows: '22', type: 'text', value: this.state.userInput, onChange: this.handleUserInput })
 			),
-			React.createElement(Footer, { className: 'footer' })
+			React.createElement(
+				'div',
+				{ className: 'col-xs-6' },
+				marked(this.state.userInput),
+				'>'
+			)
 		);
 	}
 });
 
-module.exports = MDPreviewer;
+module.exports = App;
 
 /***/ }),
 /* 81 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = __webpack_require__(112);
-
-
-/***/ }),
-/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var React = __webpack_require__(25);
@@ -9531,7 +9514,7 @@ var Footer = React.createClass({
 module.exports = Footer;
 
 /***/ }),
-/* 83 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var React = __webpack_require__(25);
@@ -9557,6 +9540,16 @@ var Header = React.createClass({
 });
 
 module.exports = Header;
+
+/***/ }),
+/* 83 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = __webpack_require__(112);
+
 
 /***/ }),
 /* 84 */
@@ -23113,10 +23106,26 @@ module.exports = g;
 /***/ (function(module, exports, __webpack_require__) {
 
 var React = __webpack_require__(25);
-var ReactDOM = __webpack_require__(81);
+var ReactDOM = __webpack_require__(83);
 var App = __webpack_require__(80);
+var Footer = __webpack_require__(81);
+var Header = __webpack_require__(82);
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('app'));
+var Display = React.createClass({
+  displayName: 'Display',
+
+  render: function () {
+    return React.createElement(
+      'div',
+      { className: 'container' },
+      React.createElement(Header, null),
+      React.createElement(App, null),
+      React.createElement(Footer, null)
+    );
+  }
+});
+
+ReactDOM.render(React.createElement(Display, null), document.getElementById('app'));
 
 /***/ })
 /******/ ]);

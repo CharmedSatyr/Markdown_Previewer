@@ -8,7 +8,8 @@ var Header = React.createClass(
           <div className='col-xs-12'>
             <h1>Markdown Previewer</h1>
           </div>
-        </div>)
+        </div>
+      );
     }
   }
 );
