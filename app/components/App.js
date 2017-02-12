@@ -2,7 +2,22 @@ var React = require('react');
 var Header = require('./Header');
 var Footer = require('./Footer');
 
+var marked = require('marked');
+marked.setOptions({
+  renderer: new marked.Renderer(),
+  gfm: true,
+  tables: true,
+  breaks: false,
+  pedantic: false,
+  sanitize: true,
+  smartLists: true,
+  smartypants: false
+});
+console.log(marked('I am using __markdown__.'));
+
+
 var MDPreviewer = React.createClass({
+
 			getInitialState: function () {
 				return {userInput: 'Heading\n=======\n\nSub-heading\n-----------\n \n### Another deeper heading\n \nParagraphs are separated\nby a blank line.\n\nLeave 2 spaces at the end of a line to do a  \nline break\n\nText attributes *italic*, **bold**, \n`monospace`, ~~strikethrough~~ .\n\nShopping list:\n\n  * apples\n  * oranges\n  * pears\n\nNumbered list:\n\n  1. apples\n  2. oranges\n  3. pears\n\nThe rain---not the reign---in\nSpain.\n\n *[Herman Fassett](https://freecodecamp.com/hermanfassett)*'}
 			},
@@ -14,16 +29,16 @@ var MDPreviewer = React.createClass({
 				);
 			},
 			render: function() {
-				var n = Math.floor(Math.random() * 10 + 1);
-				return (
-					<div class='container'>
-						<Header/>
-						<p>Write your test below, and something will happen...</p>
-						<br/>
-						<textarea rows='5' type='text' value={this.state.userInput} onChange={this.handleUserInput} className='form-control'/>
-						<br/>
-						<div class='test'>{this.state.userInput}</div>
-						<Footer/>
+        return (
+					<div className='container'>
+						<Header />
+						<div className='row'>
+							<div className='col-xs-6'>
+								<textarea className='form-control' rows='22' type='text' value={this.state.userInput} onChange={this.handleUserInput}/>
+							</div>
+							<div className='col-xs-6'>{this.state.userInput}</div>
+						</div>
+						<Footer className='footer'/>
 					</div>);
 				}
 			});

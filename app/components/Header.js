@@ -4,9 +4,10 @@ var Header = React.createClass(
   {
     render: function () {
       return (
-        <div>
-          <h1>Markdown Previewer</h1>
-          <h3>::hear me roar::</h3>
+        <div className='header row'>
+          <div className='col-xs-12'>
+            <h1>Markdown Previewer</h1>
+          </div>
         </div>)
     }
   }

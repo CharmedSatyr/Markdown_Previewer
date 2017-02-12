@@ -4,7 +4,7 @@ var Footer = React.createClass(
   {
     render: function () {
       return (
-        <p>Created by <a href='https://www.CharmedSatyr.com'>CharmedSatyr</a></p>
+        <div className='footer'>Created by <a href='https://www.CharmedSatyr.com'>CharmedSatyr</a></div>
       );
     }
   }
