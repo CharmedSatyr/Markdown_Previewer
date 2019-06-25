@@ -1,4 +1,7 @@
 # **Markdown Previewer**
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/charmedsatyr-freecodecamp/markdown_previewer.svg)](https://greenkeeper.io/)
+
 ### "Build a Markdown Previewer" is a requirement for freeCodeCamp Data Visualization Certification: https://www.freecodecamp.com/challenges/build-a-markdown-previewer
 
 **Date Completed: February 13, 2017**
