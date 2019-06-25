@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CharmedSatyr/Markdown_Previewer.git"
+    "url": "git+https://github.com/CharmedSatyr-freeCodeCamp/markdown_previewer.git"
   },
   "keywords": [
     "freeCodeCamp",
@@ -18,11 +18,11 @@
   "author": "CharmedSatyr",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/CharmedSatyr/Markdown_Previewer/issues"
+    "url": "https://github.com/CharmedSatyr-freeCodeCamp/markdown_previewer/issues"
   },
-  "homepage": "https://github.com/CharmedSatyr/Markdown_Previewer#readme",
+  "homepage": "https://github.com/CharmedSatyr-freeCodeCamp/markdown_previewer#readme",
   "dependencies": {
-    "marked": "^0.3.6",
+    "marked": "^0.6.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },
