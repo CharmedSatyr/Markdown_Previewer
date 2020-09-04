@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/CharmedSatyr-freeCodeCamp/markdown_previewer#readme",
   "dependencies": {
-    "marked": "^0.6.2",
+    "marked": "^0.7.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },
